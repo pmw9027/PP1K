@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANUS | IP Registration</title>
+    <style>
+        :root {
+            --main-blue: #2962FF;
+            --dark-grey: #2D2D2D;
+            --light-bg: #F5F7FA;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--dark-grey);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--main-blue);
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #666;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--main-blue);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--main-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1A4BD3;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #AAA;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>MANUS</h1>
+        <p>당신의 소중한 지식재산을 세상과 연결하세요.</p>
+    </div>
+
+    <form id="ipForm">
+        <div class="form-group">
+            <label>IP 명칭</label>
+            <input type="text" placeholder="아이디어 또는 특허 명칭을 입력하세요" required>
+        </div>
+
+        <div class="form-group">
+            <label>카테고리</label>
+            <select>
+                <option>특허/기술</option>
+                <option>디자인/예술</option>
+                <option>소프트웨어/BM</option>
+                <option>기타 아이디어</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>상세 설명</label>
+            <textarea placeholder="핵심 내용과 기대 효과를 설명해주세요"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>관련 파일 업로드</label>
+            <input type="file">
+        </div>
+
+        <button type="submit" class="btn-submit">IP 등록하기</button>
+    </form>
+
+    <div class="footer-text">
+        © 2026 MANUS. All Rights Reserved. 본 페이지는 보안 연결을 통해 보호됩니다.
+    </div>
+</div>
+
+<script>
+    document.getElementById('ipForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('성공적으로 등록되었습니다! 검토 후 연락드리겠습니다.');
+    });
+</script>
+
+</body>
+</html>
